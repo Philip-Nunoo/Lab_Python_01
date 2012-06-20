@@ -41,11 +41,14 @@ lastname = raw_input ("Enter your last name     : ")
 
 print "Enter your date of birth : "
 month = raw_input ("     Month (1-12)?  ")
-day = raw_input ("     Day ?    ")
+day1 = raw_input ("     Day ?    ")
 year = raw_input ("     Year?   ")
 
+if (int(month) == 11 or int(month) ==12):
+    year = int(year) - 1
+
 vara = int(month);
-varb = int(day);
+varb = int(day1);
 varc = int(year)%100
 vard = int(year)/100
 
@@ -73,4 +76,4 @@ elif (varr == 5):
 else:
     day = "Saturday"
     
-print firstname, " " , lastname ," was born on " , month,day, ",", year," of day,", day
+print firstname, " " , lastname ," was born on " , month, day1, ",", year," on day,", day
